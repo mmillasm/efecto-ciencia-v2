@@ -17,7 +17,7 @@ export default function About() {
             lenguaje claro y con la fuente al lado.
           </p>
           <p>
-            Trabajamos con investigadoras, investigadores y periodistas para acercar el conocimiento
+            Trabajamos con investigadoras, investigadores y comunicadores para acercar el conocimiento
             a quienes toman decisiones — y a quienes quieren entender el mundo que viene.
           </p>
         </div>
