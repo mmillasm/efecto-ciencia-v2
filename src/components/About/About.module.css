@@ -1,0 +1,89 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 96px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.copy h2 {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  color: var(--ink);
+}
+
+.copy p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  max-width: 520px;
+}
+
+.vis {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 24px;
+  background: #0b1230;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.vis::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.06;
+}
+
+.ring {
+  position: absolute;
+  border: 1px solid rgba(232, 90, 79, 0.45);
+  border-radius: 50%;
+}
+
+.ring1 {
+  inset: 18%;
+  transform: rotate(28deg);
+}
+
+.ring2 {
+  inset: 18%;
+  transform: rotate(-28deg);
+}
+
+.core {
+  position: relative;
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 80px rgba(244, 123, 110, 0.5);
+}
+
+.visLabel {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+@media (max-width: 980px) {
+  .about { grid-template-columns: 1fr; gap: 40px; }
+}

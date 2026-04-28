@@ -1,0 +1,49 @@
+.instaGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.instaTile {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+}
+
+.instaTile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 18, 48, 0);
+  transition: 0.2s;
+}
+
+.instaTile:hover::after {
+  background: rgba(11, 18, 48, 0.5);
+}
+
+.igIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2s;
+  color: #fff;
+  z-index: 2;
+}
+
+.instaTile:hover .igIcon {
+  opacity: 1;
+}
+
+@media (max-width: 980px) {
+  .instaGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .instaGrid { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,0 +1,123 @@
+.opinionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.opinionCard {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  transition: 0.2s;
+  position: relative;
+  align-items: stretch;
+  color: inherit;
+}
+
+.opinionCard:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -18px rgba(11, 18, 48, 0.18);
+}
+
+.opinionPhoto {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1f2a63, #0b1230);
+  position: relative;
+  overflow: hidden;
+  align-self: start;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-right: 48px;
+}
+
+.cat {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coral);
+  font-weight: 600;
+}
+
+.body h3 {
+  font-size: 24px;
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 8px 0 12px;
+  color: var(--ink);
+}
+
+.body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.author {
+  margin-top: auto;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  gap: 12px;
+}
+
+.authorName {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.authorRole {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.readTime {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.arrow {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  transition: 0.2s;
+  color: var(--ink);
+}
+
+.opinionCard:hover .arrow {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: #fff;
+}
+
+@media (max-width: 980px) {
+  .opinionGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .opinionCard { grid-template-columns: 1fr; }
+}
